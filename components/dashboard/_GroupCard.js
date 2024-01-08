@@ -1,5 +1,6 @@
 import { View, Text, StyleSheet, Pressable } from "react-native";
 import { FONT_SIZE, COLOURS } from "../../app/constants";
+import { useRouter } from "expo-router";
 
 const styles = StyleSheet.create({
   container: {
@@ -20,11 +21,15 @@ const styles = StyleSheet.create({
   },
 });
 
-export const GroupCard = (props) => {
+export const GroupCard = ({ groupData }) => {
+  const router = useRouter();
   return (
-    <Pressable style={styles.container} onPress={() => {}}>
-      <Text style={styles.headerText}>{props.group}</Text>
-      <Text style={styles.text}>${props.balance}</Text>
+    <Pressable
+      style={styles.container}
+      onPress={() => router.push(`/group-details/${groupData.id}`)}
+    >
+      <Text style={styles.headerText}>{groupData.name}</Text>
+      <Text style={styles.text}>${groupData.balance}</Text>
     </Pressable>
   );
 };

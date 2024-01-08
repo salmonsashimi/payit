@@ -20,13 +20,11 @@ const Dashboard = () => {
         </Text>
         <FlatList
           data={[
-            { name: "Group A", balance: 100 },
-            { name: "Group B", balance: -50 },
-            { name: "Group C", balance: 0 },
+            { id: "1", name: "Trip A", balance: 100 },
+            { id: "2", name: "Trip B", balance: -50 },
+            { id: "3", name: "Group C", balance: 0 },
           ]}
-          renderItem={({ item }) => (
-            <GroupCard group={item.name} balance={item.balance} />
-          )}
+          renderItem={({ item }) => <GroupCard groupData={item} />}
         />
       </View>
       <View>
