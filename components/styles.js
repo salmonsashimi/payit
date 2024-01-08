@@ -1,5 +1,6 @@
 import { FONT_SIZE, COLOURS } from "../app/constants";
 
+//common styles
 export const buttonStyles = {
   backgroundColor: COLOURS.green3,
   color: COLOURS.white3,

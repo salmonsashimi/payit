@@ -1,27 +1,38 @@
-import { View, Text, SafeAreaView } from "react-native";
+import { View, Text, SafeAreaView, Pressable, FlatList } from "react-native";
 import { Stack, useRouter } from "expo-router";
 import { FONT_SIZE } from "../../app/constants";
-import { TouchableOpacity } from "react-native-web";
 import { buttonStyles } from "../styles";
+import { GroupCard } from "./_GroupCard";
 
 const Dashboard = () => {
   const router = useRouter();
   return (
-    <View style={{ flex: 1, padding: "10px" }}>
+    <View style={{ flex: 1 }}>
       <View>
         <Text
           style={{
             fontWeight: 500,
             fontSize: FONT_SIZE.medium,
+            padding: "10px",
           }}
         >
           Overall, you are owed $100
         </Text>
+        <FlatList
+          data={[
+            { name: "Group A", balance: 100 },
+            { name: "Group B", balance: -50 },
+            { name: "Group C", balance: 0 },
+          ]}
+          renderItem={({ item }) => (
+            <GroupCard group={item.name} balance={item.balance} />
+          )}
+        />
       </View>
       <View>
-        <TouchableOpacity style={buttonStyles} onPress={() => {}}>
+        <Pressable style={buttonStyles} onPress={() => {}}>
           Create group
-        </TouchableOpacity>
+        </Pressable>
       </View>
     </View>
   );
