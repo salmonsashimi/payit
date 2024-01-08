@@ -1,7 +1,7 @@
-import { FONT_SIZE, COLOURS, SIZES } from "../app/constants";
+import { FONT_SIZE, COLOURS, SIZES } from "./constants";
 
 //common styles
-export const buttonStyles = {
+export const floatingButtonStyles = {
   backgroundColor: COLOURS.green3,
   color: COLOURS.white3,
   borderRadius: "30px",
@@ -9,4 +9,7 @@ export const buttonStyles = {
   textAlign: "center",
   fontSize: FONT_SIZE.medium,
   padding: SIZES.medium,
+  position: "absolute",
+  right: 10,
+  bottom: 30,
 };

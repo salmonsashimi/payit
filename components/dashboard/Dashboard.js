@@ -1,7 +1,6 @@
 import { View, Text, SafeAreaView, Pressable, FlatList } from "react-native";
 import { Stack, useRouter } from "expo-router";
 import { FONT_SIZE, SIZES } from "../../app/constants";
-import { buttonStyles } from "../styles";
 import { GroupCard } from "./_GroupCard";
 
 const Dashboard = () => {
@@ -26,11 +25,6 @@ const Dashboard = () => {
           ]}
           renderItem={({ item }) => <GroupCard groupData={item} />}
         />
-      </View>
-      <View>
-        <Pressable style={buttonStyles} onPress={() => {}}>
-          Create group
-        </Pressable>
       </View>
     </View>
   );

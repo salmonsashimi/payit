@@ -1,7 +1,8 @@
-import { View, ScrollView, SafeAreaView } from "react-native";
+import { View, ScrollView, SafeAreaView, Pressable } from "react-native";
 import { Stack, useRouter } from "expo-router";
 import { COLOURS, FONT_SIZE } from "./constants";
 import Dashboard from "../components/dashboard/Dashboard";
+import { floatingButtonStyles } from "./styles";
 
 const Home = () => {
   const router = useRouter();
@@ -23,6 +24,9 @@ const Home = () => {
       <ScrollView showsVerticalScrollIndicator={false}>
         <Dashboard />
       </ScrollView>
+      <Pressable style={floatingButtonStyles} onPress={() => {}}>
+        Create group
+      </Pressable>
     </SafeAreaView>
   );
 };
