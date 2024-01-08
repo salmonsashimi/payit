@@ -1,12 +1,12 @@
 import { View, Text, StyleSheet, Pressable } from "react-native";
-import { FONT_SIZE, COLOURS } from "../../app/constants";
+import { FONT_SIZE, COLOURS, SIZES } from "../../app/constants";
 import { useRouter } from "expo-router";
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 10,
-    margin: 3,
+    padding: SIZES.large,
+    marginTop: SIZES.extraSmall,
     backgroundColor: COLOURS.green1,
     color: COLOURS.white,
     height: 50,

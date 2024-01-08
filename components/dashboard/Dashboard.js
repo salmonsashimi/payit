@@ -1,6 +1,6 @@
 import { View, Text, SafeAreaView, Pressable, FlatList } from "react-native";
 import { Stack, useRouter } from "expo-router";
-import { FONT_SIZE } from "../../app/constants";
+import { FONT_SIZE, SIZES } from "../../app/constants";
 import { buttonStyles } from "../styles";
 import { GroupCard } from "./_GroupCard";
 
@@ -13,7 +13,7 @@ const Dashboard = () => {
           style={{
             fontWeight: 500,
             fontSize: FONT_SIZE.medium,
-            padding: "10px",
+            padding: SIZES.large,
           }}
         >
           Overall, you are owed $100

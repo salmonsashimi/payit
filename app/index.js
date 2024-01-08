@@ -6,7 +6,7 @@ import Dashboard from "../components/dashboard/Dashboard";
 const Home = () => {
   const router = useRouter();
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: "eee" }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: COLOURS.backgroundColor }}>
       <Stack.Screen
         options={{
           headerStyle: {
