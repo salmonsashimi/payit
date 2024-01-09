@@ -1,6 +1,6 @@
 import { View, Text, SafeAreaView, Pressable, FlatList } from "react-native";
 import { Stack, useRouter } from "expo-router";
-import { FONT_SIZE, SIZES } from "../../app/constants";
+import { FONT_SIZE, SIZES } from "PayIt/app/constants";
 import { GroupCard } from "./_GroupCard";
 
 const Dashboard = () => {
