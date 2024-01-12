@@ -1,8 +1,10 @@
-import { SafeAreaView, View } from "react-native";
-import { Stack } from "expo-router";
+import { Pressable, SafeAreaView, View } from "react-native";
+import { Stack, useRouter } from "expo-router";
 import { COLOURS, FONT_SIZE } from "../constants";
-
+import { ArrowBack } from "@components/header/ArrowBack";
 const GroupDetails = () => {
+  const router = useRouter();
+  const onCreateGroupPress = () => {};
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: COLOURS.backgroundColor }}>
       <Stack.Screen
@@ -16,6 +18,7 @@ const GroupDetails = () => {
             color: COLOURS.white2,
             fontSize: FONT_SIZE.large,
           },
+          headerLeft: () => <ArrowBack />,
         }}
       />
       <View></View>

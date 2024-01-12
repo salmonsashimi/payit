@@ -11,6 +11,8 @@ import { Stack, useRouter } from "expo-router";
 import { COLOURS, FONT_SIZE, SIZES } from "./constants";
 import { GroupTextInput } from "@components/createGroup/GroupTextInput";
 import { GroupTypeSelect } from "@components/createGroup/GroupTypeSelect";
+import { ArrowBack } from "@components/header/ArrowBack";
+import { DoneButton } from "@components/header/DoneButton";
 
 const styles = StyleSheet.create({
   page: { flex: 1, backgroundColor: COLOURS.backgroundColor },
@@ -31,13 +33,14 @@ const styles = StyleSheet.create({
     width: "100%",
     backgroundColor: COLOURS.green2,
   },
-  doneButton: {},
 });
 const createGroup = () => {
   const [groupName, setGroupName] = useState("");
   const router = useRouter();
 
-  const onCreateGroupClick = () => {};
+  const onCreateGroupClick = () => {
+    router.back();
+  };
   return (
     <SafeAreaView style={styles.page}>
       <Stack.Screen
@@ -51,12 +54,8 @@ const createGroup = () => {
             color: COLOURS.white2,
             fontSize: FONT_SIZE.large,
           },
-          headerLeft: () => (
-            <Pressable onPress={() => router.push("/")}>{`<`}</Pressable>
-          ),
-          headerRight: () => (
-            <Pressable onPress={onCreateGroupClick}>Done</Pressable>
-          ),
+          headerLeft: () => <ArrowBack />,
+          headerRight: () => <DoneButton onBackPress={onCreateGroupClick} />,
         }}
       />
       <View style={styles.container}>
