@@ -1,5 +1,5 @@
 import { View, FlatList, Text, StyleSheet, Pressable } from "react-native";
-import { COLOURS, FONT_SIZE, SIZES } from "PayIt/app/constants";
+import { COLOURS, FONT_SIZE, SIZES } from "@app/constants";
 
 const styles = StyleSheet.create({
   inputLabel: {

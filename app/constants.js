@@ -23,3 +23,9 @@ export const SIZES = {
   large: "1rem",
   extraLarge: "1.5rem",
 };
+
+export const mockGroupData = [
+  { id: "1", name: "Trip A", balance: 100 },
+  { id: "2", name: "Trip B", balance: -50 },
+  { id: "3", name: "Group C", balance: 0 },
+];

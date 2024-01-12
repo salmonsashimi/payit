@@ -1,5 +1,5 @@
 import { View, Text, StyleSheet, Pressable } from "react-native";
-import { FONT_SIZE, COLOURS, SIZES } from "PayIt/app/constants";
+import { FONT_SIZE, COLOURS, SIZES } from "@app/constants";
 import { useRouter } from "expo-router";
 
 const styles = StyleSheet.create({

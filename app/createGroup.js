@@ -9,8 +9,8 @@ import {
 } from "react-native";
 import { Stack, useRouter } from "expo-router";
 import { COLOURS, FONT_SIZE, SIZES } from "./constants";
-import { GroupTextInput } from "PayIt/components/createGroup/GroupTextInput";
-import { GroupTypeSelect } from "PayIt/components/createGroup/GroupTypeSelect";
+import { GroupTextInput } from "@components/createGroup/GroupTextInput";
+import { GroupTypeSelect } from "@components/createGroup/GroupTypeSelect";
 
 const styles = StyleSheet.create({
   page: { flex: 1, backgroundColor: COLOURS.backgroundColor },
