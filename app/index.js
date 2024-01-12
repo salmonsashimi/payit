@@ -1,4 +1,4 @@
-import { View, ScrollView, SafeAreaView, Pressable } from "react-native";
+import { View, ScrollView, SafeAreaView, Pressable, Text } from "react-native";
 import { Stack, useRouter } from "expo-router";
 import { COLOURS, FONT_SIZE } from "./constants";
 import Dashboard from "@components/dashboard/Dashboard";
@@ -28,7 +28,16 @@ const Home = () => {
         style={floatingButtonStyles}
         onPress={() => router.push("/createGroup")}
       >
-        Create group
+        <Text
+          style={{
+            flex: 1,
+            textAlign: "center",
+            color: COLOURS.white2,
+            fontWeight: 500,
+          }}
+        >
+          Create group
+        </Text>
       </Pressable>
     </SafeAreaView>
   );

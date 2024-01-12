@@ -4,7 +4,6 @@ import { COLOURS, FONT_SIZE } from "../constants";
 import { ArrowBack } from "@components/header/ArrowBack";
 const GroupDetails = () => {
   const router = useRouter();
-  const onCreateGroupPress = () => {};
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: COLOURS.backgroundColor }}>
       <Stack.Screen

@@ -22,14 +22,18 @@ const styles = StyleSheet.create({
 });
 
 export const GroupCard = ({ groupData }) => {
+  const { name, balance } = groupData;
+
   const router = useRouter();
+
   return (
     <Pressable
       style={styles.container}
       onPress={() => router.push(`/group-details/${groupData.id}`)}
     >
-      <Text style={styles.headerText}>{groupData.name}</Text>
-      <Text style={styles.text}>${groupData.balance}</Text>
+      <Text style={styles.headerText}>{name}</Text>
+
+      <Text style={styles.text}>{balance ? `$${balance}` : "Settled up"}</Text>
     </Pressable>
   );
 };
