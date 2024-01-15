@@ -1,7 +1,8 @@
-import { Pressable, SafeAreaView, View } from "react-native";
+import { SafeAreaView, View } from "react-native";
 import { Stack, useRouter } from "expo-router";
 import { COLOURS, FONT_SIZE } from "../constants";
 import { ArrowBack } from "@components/header/ArrowBack";
+import { GroupInfo } from "@components/groupInfo/GroupInfo";
 const GroupDetails = () => {
   const router = useRouter();
   return (
@@ -20,7 +21,7 @@ const GroupDetails = () => {
           headerLeft: () => <ArrowBack />,
         }}
       />
-      <View></View>
+      <GroupInfo />
     </SafeAreaView>
   );
 };
