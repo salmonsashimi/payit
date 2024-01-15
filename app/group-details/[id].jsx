@@ -1,10 +1,13 @@
 import { SafeAreaView, View } from "react-native";
-import { Stack, useRouter } from "expo-router";
-import { COLOURS, FONT_SIZE } from "../constants";
+import { Stack, useRouter, useLocalSearchParams } from "expo-router";
+import { COLOURS, FONT_SIZE } from "@app/constants";
 import { ArrowBack } from "@components/header/ArrowBack";
 import { GroupInfo } from "@components/groupInfo/GroupInfo";
 const GroupDetails = () => {
   const router = useRouter();
+  const local = useLocalSearchParams();
+  const {id} = local
+
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: COLOURS.backgroundColor }}>
       <Stack.Screen
@@ -21,7 +24,7 @@ const GroupDetails = () => {
           headerLeft: () => <ArrowBack />,
         }}
       />
-      <GroupInfo />
+      <GroupInfo id={id}/>
     </SafeAreaView>
   );
 };

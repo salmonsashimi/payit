@@ -9,11 +9,9 @@ const styles = StyleSheet.create({
       flex: 1,
       padding: SIZES.extraLarge,
     },
-    
   });
 
-export const GroupInfo = () => {
-    
+export const GroupInfo = ({id}) => {
     return (
         <View style={styles.wrapper}>
           <View style={styles.container}>
@@ -21,7 +19,7 @@ export const GroupInfo = () => {
 {/* // add expense */}
 {/*  expense list*/}
 {/*  actions*/}
-<FloatingButton text={"Create expense"} route={"/create"}/>
+<FloatingButton text={"Create expense"} route={`/group-details/create/${id}`}/>
           </View>
         </View>
     )
