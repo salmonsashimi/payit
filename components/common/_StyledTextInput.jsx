@@ -21,12 +21,14 @@ const styles = StyleSheet.create({
 });
 
 export const StyledTextInput = (props) => {
-  const { value, onTextChange } = props;
+  const { placeholder, value, onTextChange } = props;
   return (
     <View style={styles.wrapper}>
       <TextInput
         style={styles.textInput}
+        placeholderTextColor={"grey"}
         autoFocus
+        placeholder={placeholder}
         value={value}
         onChange={onTextChange}
       />

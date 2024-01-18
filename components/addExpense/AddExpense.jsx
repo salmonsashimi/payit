@@ -3,6 +3,7 @@ import { SafeAreaView, StyleSheet, View, Text } from "react-native";
 import { Stack, useRouter, useLocalSearchParams } from "expo-router";
 import { COLOURS, FONT_SIZE, SIZES } from "@app/constants";
 import { ExpenseInput } from "./_ExpenseInput";
+import { ExpenseBy } from "./_ExpenseBy";
 
 export const AddExpense = () => {
   const router = useRouter();
@@ -17,7 +18,7 @@ export const AddExpense = () => {
   });
 
   const [description, setDescription] = useState("");
-  const [amount, setAmount] = useState(0);
+  const [amount, setAmount] = useState("");
   return (
     <View style={styles.container}>
       <Text style={styles.header}>With "THE GROUP NAME HERE"</Text>
@@ -27,6 +28,7 @@ export const AddExpense = () => {
         amount={amount}
         setAmount={setAmount}
       />
+      <ExpenseBy />
     </View>
   );
 };
