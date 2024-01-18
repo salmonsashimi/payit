@@ -2,7 +2,7 @@ import { View, ScrollView, SafeAreaView, Pressable, Text } from "react-native";
 import { Stack, useRouter } from "expo-router";
 import { COLOURS, FONT_SIZE } from "./constants";
 import Dashboard from "@components/dashboard/Dashboard";
-import { FloatingButton } from "@components/common/FloatingButton";
+import { FloatingButton } from "@components/common/_FloatingButton";
 
 const Home = () => {
   const router = useRouter();

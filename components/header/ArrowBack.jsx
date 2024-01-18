@@ -6,7 +6,7 @@ export const ArrowBack = () => {
   const router = useRouter();
   return (
     <Pressable onPress={() => router.back()} style={{ padding: SIZES.medium }}>
-      <Ionicons name="chevron-back-outline" size={25} color="white" />
+<Ionicons name="arrow-back" size={24} color="white" />
     </Pressable>
   );
 };
