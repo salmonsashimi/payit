@@ -1,13 +1,8 @@
 import { useState } from "react";
 import { View, FlatList, Text, StyleSheet, Pressable } from "react-native";
 import { COLOURS, FONT_SIZE, SIZES } from "@app/constants";
+import { SquareActiveButton } from "@components/common/_SquareActiveButton";
 
-const commonButtonStyles = {
-  borderRadius: 7,
-  padding: SIZES.extraSmall,
-  paddingLeft: SIZES.large,
-  paddingRight: SIZES.large,
-};
 const styles = StyleSheet.create({
   inputLabel: {
     marginBottom: SIZES.extraSmall,
@@ -16,18 +11,6 @@ const styles = StyleSheet.create({
   list: {
     flex: 1,
     flexDirection: "row",
-  },
-  typeButton: {
-    ...commonButtonStyles,
-    border: `1px solid ${COLOURS.green2}`,
-  },
-  activeTypeButton: {
-    ...commonButtonStyles,
-    border: `1px solid ${COLOURS.green2}`,
-    backgroundColor: COLOURS.green2,
-  },
-  activeTypeText: {
-    color: COLOURS.white2,
   },
 });
 
@@ -46,17 +29,11 @@ export const GroupTypeSelect = (props) => {
         }}
         data={["Family", "Friends", "Couple", "Others"]}
         renderItem={({ item }) => (
-          <Pressable
-            value={groupType}
-            onPress={() => setGroupType(item)}
-            style={
-              item === groupType ? styles.activeTypeButton : styles.typeButton
-            }
-          >
-            <Text style={item === groupType && styles.activeTypeText}>
-              {item}
-            </Text>
-          </Pressable>
+          <SquareActiveButton
+            active={groupType}
+            onButtonPress={() => setGroupType(item)}
+            buttonText={item}
+          />
         )}
       />
     </View>

@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     gap: SIZES.small,
   },
   button: {
-    border: `2px solid ${COLOURS.green3}`,
+    border: `3px solid ${COLOURS.green3}`,
     borderRadius: SIZES.extraSmall,
     width: "35px",
     height: "35px",
@@ -38,7 +38,7 @@ export const ExpenseInput = (props) => {
           <Ionicons name="list-sharp" size={25} color={COLOURS.white2} />
         </Pressable>
         <StyledTextInput
-          placeholder={"Description"}
+          placeholder={"Enter a description"}
           value={description}
           onTextChange={onDescriptionChange}
         />

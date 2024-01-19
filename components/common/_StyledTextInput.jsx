@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     flexGrow: 1,
   },
   textInputLine: {
-    height: "2px",
+    height: "3px",
     width: "100%",
     backgroundColor: COLOURS.green2,
   },
